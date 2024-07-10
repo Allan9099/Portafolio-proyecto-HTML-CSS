@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+
+    --color-primario: #000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #22d4fd;
+    --color-hover: #272727;
+    --color-acentuacion: #0000FF;
+    --fuente-primaria: "Krona One", sans-serif;
+    --fuente-secundaria: "Montserrat", sans-serif;
+    --tamaño-fuente-parrafos: 1.5rem; /*24px*/
+    --tamaño-fuente-titulos: 2.5rem; /*40px*/
+
+
+}
+
+* {
+
+    zoom: 0.925;
+    padding: 0;
+    margin: 0;
+
+}
+
+.header {
+
+    padding: 2% 0 0 21%;
+
+}
+
+.header__menu {
+
+    display: flex;
+    gap: 80px;
+
+}
+
+.header__menu__link {
+
+    color: var(--color-terciario);
+    font-family: var(--fuente-secundaria);
+    font-size: var(--tamaño-fuente-parrafos);
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+body {
+
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+    
+}
+
+.Titulo {
+
+    color: var(--color-terciario);
+
+}
+
+.presentacion {
+
+    display: flex;
+    align-items: center;
+    padding: 5% 21% 3.45% 21%;
+    justify-content: space-between;
+    gap: 82px;
+
+}
+ .presentacion__imagen {
+
+    width: 50%;
+
+}
+
+.presentacion__contenido {
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+
+}
+
+.presentacion__contenido__titulo {
+
+    font-size: var(--tamaño-fuente-titulos);
+    font-family: var(--fuente-primaria);
+
+}
+
+.presentacion__contenido__parrafo {
+
+    font-size: var(--tamaño-fuente-parrafos);
+    font-family: var(--fuente-secundaria);
+
+}
+
+.presentacion__enlaces {
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /*justify-content: center;      esto no porque al cambiar a column, este cambia el eje e 
+                                   inutiliza este comando, por eso se usa el de abajo.*/
+    align-items: center;
+    gap: 32px;
+
+}
+
+.presentacion__enlaces__titulo {
+
+    font-family: var(--fuente-primaria);
+    font-size: var(--tamaño-fuente-parrafos);
+    font-weight: 400;
+
+}
+
+.presentacion__enlaces__link {
+
+    width: 50%;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    border: 3px solid;
+    border-radius: 8px;
+    border-color: var(--color-terciario);
+    text-align: center;
+    padding: 21.5px 0;
+    font-size: var(--tamaño-fuente-parrafos);
+    font-family: var(--fuente-secundaria);
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+}
+
+.presentacion__enlaces__link:hover {
+
+    background-color: var(--color-hover);
+    border-color: var(--color-acentuacion);
+
+}
+
+.footer {
+
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
+    font-family: var(--fuente-secundaria);
+    font-size: var(--tamaño-fuente-parrafos);
+    font-weight: 400;
+    padding: var(--tamaño-fuente-parrafos);
+    text-align: center;
+
+
+}
+
+@media (max-width: 1140px) {
+
+    .header{
+
+        padding: 10%;
+
+    }
+
+    .header__menu {
+
+        justify-content: center;
+
+    }
+
+    .presentacion__imagen {
+
+        width: 100%;
+
+    }
+
+    .presentacion {
+
+        flex-direction: column-reverse;
+
+
+    }
+
+    .presentacion__enlaces__link {
+
+        width: 100%;
+
+    }
+
+    .presentacion__contenido {
+
+        width: auto;
+
+    }
+
+    .footer {
+
+        margin-top: 5%;
+
+    }
+
+}
